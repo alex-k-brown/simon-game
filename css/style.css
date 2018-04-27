@@ -1,0 +1,155 @@
+#container {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    /*opacity: 0;*/
+    /*transition: opacity .5s linear .25s;*/
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    background-color: black;
+}
+
+#container * {
+    color: white;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.intro,
+.story,
+.end {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.copy {
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.title,
+.end-text {
+    font-size: 10vw;
+}
+#container .title,
+#container .start,
+#container .description,
+#container .question,
+#container .answer,
+#container .end-description,
+#container .end-text,
+#container .redo {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.start {
+    font-size: 3vw;
+    line-height: 5vw;
+}
+.intro,
+.story,
+.end {
+    display: none;
+}
+.intro {
+    cursor: pointer;
+}
+.intro.active, .story.active, .end.active {
+    display: block;
+}
+.description,
+.question,
+.answer,
+.end-description {
+    font-size: 2vw;
+    line-height: 3vw;
+}
+.question {
+    font-weight: bold;
+    font-size: 2.5vw;
+    margin: 3vw 0 3vw;
+}
+.answer {
+    border: .5vw solid white;
+    padding: 1vw;
+    margin: 1vw 0 0;
+    cursor: pointer;
+}
+.redo {
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+@media only screen 
+  and (max-device-width: 767px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .copy {
+        width: 75%;
+    }
+    .title {
+        font-size: 16vw;
+        line-height: 16vw;
+    }
+    .start {
+        font-size: 7vw;
+        line-height: 21vw;
+    }
+    .description, .question, .answer, .end-description {
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+    .question {
+        font-weight: bold;
+        font-size: 8.5vw;
+        margin: 8vw 0 11vw;
+    }
+    .answer {
+        margin: 6vw 0 0;
+    }
+    .end-text {
+        font-size: 18vw;
+        margin: 7vw 0;
+    }
+    .redo {
+        font-size: 6vw;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .copy {
+        width: 75%;
+    }
+    .title {
+        font-size: 16vw;
+        line-height: 16vw;
+    }
+    .start {
+        font-size: 7vw;
+        line-height: 21vw;
+    }
+    .description, .question, .answer, .end-description {
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+    .question {
+        font-weight: bold;
+        font-size: 8.5vw;
+        margin: 8vw 0 11vw;
+    }
+    .answer {
+        margin: 6vw 0 0;
+    }
+    .end-text {
+        font-size: 18vw;
+        margin: 7vw 0;
+    }
+    .redo {
+        font-size: 6vw;
+    }
+}
